@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cnsia-order-service
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  r2dbc:
+    username: user
+    password: password
+    url: r2dbc:postgresql://localhost:5432/polardb_postgres
+    pool:
+      max-create-connection-time: 2s
+      initial-size: 5
+      max-size: 10
+
+server:
+  port: 9002
+  shutdown: graceful
+  netty:
+    connection-timeout: 2s
+    idle-timeout: 15s
