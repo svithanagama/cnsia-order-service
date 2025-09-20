@@ -16,7 +16,6 @@ import me.sanjayav.polarbookshop.orderservice.order.domain.Order;
 import me.sanjayav.polarbookshop.orderservice.order.domain.OrderStatus;
 import me.sanjayav.polarbookshop.orderservice.order.event.OrderAcceptedMessage;
 import me.sanjayav.polarbookshop.orderservice.order.web.OrderRequest;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -140,7 +139,6 @@ class OrderServiceApplicationTests {
         });
   }
 
-  @Disabled // TODO- Fix this after permission fixes in code
   @Test
   void whenGetOrdersForAnotherUserThenNotReturned() throws IOException {
     String bookIsbn = "1234567899";
